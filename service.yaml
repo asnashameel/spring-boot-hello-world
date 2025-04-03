@@ -1,0 +1,34 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2025-04-03T09:49:34Z"
+  labels:
+    app: spring-boot-app
+  name: spring-boot-app
+  namespace: default
+  resourceVersion: "13179"
+  uid: e895a061-ba06-41b0-a2f8-1085ca518799
+spec:
+  clusterIP: 10.107.67.160
+  clusterIPs:
+  - 10.107.67.160
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 32680
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: spring-boot-app
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
